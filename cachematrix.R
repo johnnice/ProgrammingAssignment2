@@ -1,6 +1,4 @@
-## Inverts a matrix x 
-
-## Write a short comment describing this function
+## Inverts a matrix x and stores the result in $getinverse
 
 makeCacheMatrix <- function(x = matrix()) {
   m<-NULL
@@ -14,11 +12,9 @@ makeCacheMatrix <- function(x = matrix()) {
   list(set=set,get=get,setinverse=setinverse,getinverse=getinverse)
 }
 
-## Write a short comment describing this function
-
+## Returns the inverse of matrix x by using the x$getinverse function defined in makeCacheMatrix
 
 cacheSolve <- function(x, ...) {
-          ## Return a matrix that is the inverse of 'x'
   m<-x$getinverse()
   if(!is.null(m)){
     message("getting cached data")
